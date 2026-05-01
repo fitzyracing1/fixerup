@@ -1,0 +1,64 @@
+{
+  "name": "Ticket",
+  "type": "object",
+  "properties": {
+    "client_name": {
+      "type": "string",
+      "description": "Name of the person submitting the ticket"
+    },
+    "client_email": {
+      "type": "string",
+      "description": "Contact email"
+    },
+    "repo_url": {
+      "type": "string",
+      "description": "GitHub repository URL"
+    },
+    "repo_type": {
+      "type": "string",
+      "enum": [
+        "public",
+        "private"
+      ],
+      "description": "Whether the repo is public or private"
+    },
+    "problem_description": {
+      "type": "string",
+      "description": "Detailed description of the software problem"
+    },
+    "complexity": {
+      "type": "string",
+      "enum": [
+        "quick_fix",
+        "standard",
+        "complex",
+        "critical"
+      ],
+      "default": "standard",
+      "description": "Estimated complexity tier"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "in_progress",
+        "completed",
+        "cancelled"
+      ],
+      "default": "pending",
+      "description": "Current ticket status"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Internal notes from the fixer"
+    }
+  },
+  "required": [
+    "client_name",
+    "client_email",
+    "repo_url",
+    "repo_type",
+    "problem_description",
+    "complexity"
+  ]
+}

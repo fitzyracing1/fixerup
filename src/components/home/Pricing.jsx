@@ -9,20 +9,21 @@ const tiers = [
   {
     name: "Quick Fix",
     value: "quick_fix",
-    price: "$49",
+    price: "Consultation",
     description: "Typos, config errors, small UI bugs",
     features: [
       "Single-file changes",
       "Config & environment fixes",
       "Minor CSS / styling issues",
       "Delivered within 24 hours",
+      "Price quoted after review",
     ],
     popular: false,
   },
   {
     name: "Standard",
     value: "standard",
-    price: "$149",
+    price: "Consultation",
     description: "Logic bugs, API issues, integrations",
     features: [
       "Multi-file debugging",
@@ -30,13 +31,14 @@ const tiers = [
       "Database query optimization",
       "Delivered within 48 hours",
       "Root cause analysis report",
+      "Price quoted after review",
     ],
     popular: true,
   },
   {
     name: "Complex",
     value: "complex",
-    price: "$399",
+    price: "Consultation",
     description: "Architecture issues, refactoring, performance",
     features: [
       "Cross-system debugging",
@@ -45,13 +47,14 @@ const tiers = [
       "Delivered within 5 days",
       "Detailed documentation",
       "Follow-up support",
+      "Price quoted after review",
     ],
     popular: false,
   },
   {
     name: "Critical",
     value: "critical",
-    price: "Custom",
+    price: "Consultation",
     description: "Production emergencies & security vulnerabilities",
     features: [
       "Priority SLA response",
@@ -60,6 +63,7 @@ const tiers = [
       "24/7 availability",
       "Post-mortem report",
       "Ongoing monitoring setup",
+      "Price quoted after review",
     ],
     popular: false,
   },
@@ -80,8 +84,8 @@ export default function Pricing() {
           <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4">
             Priced by Complexity
           </h2>
-          <p className="text-muted-foreground max-w-md mx-auto">
-            No hourly rates. No surprise invoices. You pick the tier, we deliver the fix.
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            Select the tier that matches your problem's complexity. After we review your submission, we'll send you a precise quote before any work begins.
           </p>
         </motion.div>
 
@@ -109,7 +113,8 @@ export default function Pricing() {
               <div className="mb-6">
                 <h3 className="text-lg font-bold mb-1">{tier.name}</h3>
                 <p className="text-xs text-muted-foreground mb-4">{tier.description}</p>
-                <p className="text-4xl font-black">{tier.price}</p>
+                <p className="text-2xl font-black">{tier.price}</p>
+                <p className="text-xs text-muted-foreground mt-1">Quoted after problem review</p>
               </div>
 
               <ul className="space-y-3 mb-8 flex-1">
